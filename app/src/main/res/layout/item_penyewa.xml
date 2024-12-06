@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- Nama Mobil -->
+    <TextView
+        android:id="@+id/mobil_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nama Mobil"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000000" />
+
+    <!-- Detail Mobil -->
+    <TextView
+        android:id="@+id/mobil_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Detail Mobil"
+        android:textSize="14sp"
+        android:textColor="#555555" />
+</LinearLayout>

@@ -1,0 +1,212 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EEEEEE">
+
+    <!-- Custom Back Button -->
+    <ImageView
+        android:id="@+id/back_button"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="24dp"
+        android:contentDescription="Back"
+        android:src="@drawable/baseline_arrow_back_ios_new_24" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/back_button"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:text="Car Information"
+        android:textSize="20sp"
+        android:textColor="#222831"
+        android:textStyle="bold" />
+
+    <!-- Car Model -->
+    <TextView
+        android:id="@+id/car_model"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Toyota Innova"
+        android:textColor="#222831"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <!-- Car Image Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/car_image_card"
+        android:layout_width="395dp"
+        android:layout_height="242dp"
+        android:layout_below="@id/car_model"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp">
+
+        <ImageView
+            android:id="@+id/car_image"
+            android:layout_width="420dp"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            android:src="@drawable/innova" />
+    </androidx.cardview.widget.CardView>
+
+    <!-- Fuel Info Section -->
+    <LinearLayout
+        android:id="@+id/fuel_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/car_image_card"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:padding="16dp">
+
+        <!-- Fuel Type -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/baseline_local_gas_station_24"
+            android:contentDescription="Fuel Type" />
+
+        <TextView
+            android:id="@+id/car_fuel_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Fuel Type: Diesel"
+            android:textSize="14sp"
+            android:textColor="#222831" />
+
+        <!-- Transmission -->
+        <ImageView
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:contentDescription="Transmission Type"
+            android:layout_marginStart="16dp"
+            android:src="@drawable/baseline_settings_24" />
+
+        <TextView
+            android:id="@+id/car_transmission"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="Transmission: Automatic"
+            android:textColor="#222831"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Transmission Info (Placeholder) -->
+    <LinearLayout
+        android:id="@+id/transmission_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fuel_info"
+        android:layout_marginTop="6dp"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:padding="16dp">
+    </LinearLayout>
+
+    <!-- Features Section -->
+    <LinearLayout
+        android:id="@+id/features_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/transmission_info"
+        android:layout_marginTop="-46dp"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="16dp">
+
+        <!-- Features Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Features:"
+            android:textColor="#222831"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Feature Items -->
+        <TextView
+            android:id="@+id/feature_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="1. AC"
+            android:textColor="#222831"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/feature_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4dp"
+            android:text="2. Audio System"
+            android:textColor="#222831"
+            android:textSize="14sp" />
+
+        <TextView
+            android:id="@+id/feature_3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="3. Bluetooth Connectivity"
+            android:textColor="#222831"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <!-- Footer Section -->
+    <LinearLayout
+        android:id="@+id/footer_section"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="10dp"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:weightSum="10">
+
+        <!-- Price Section -->
+        <TextView
+            android:id="@+id/car_price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="4"
+            android:text="Rp 500.000/hari"
+            android:textColor="#222831"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <!-- Rent Button -->
+        <Button
+            android:id="@+id/rent_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="6"
+            android:backgroundTint="#393E46"
+            android:paddingVertical="19dp"
+            android:text="Rent Now"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</RelativeLayout>
